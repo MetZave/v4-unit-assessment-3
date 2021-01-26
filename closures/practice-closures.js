@@ -38,7 +38,13 @@
   function lightSwitch() {
     let isTheLightOn = false
     function flipTheSwitch() {
-      return isTheLightOn === true ? isTheLightOn = false && `The light is off`: isTheLightOn = true && `The light is on`
+      if(isTheLightOn === false) {
+        isTheLightOn = true
+        return `The light is on`
+      } else {
+        isTheLightOn = false
+        return `The light is off`
+      } 
     }
     return flipTheSwitch
   }
